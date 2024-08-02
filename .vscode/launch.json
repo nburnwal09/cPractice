@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug in terminal",
+            "program": "/Users/nehaburnwal/Documents/cPractice/a.out",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+
+
+        {
+            "name": "Debug C with LLDB",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/nehaburnwal/Documents/cPractice/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "miDebuggerPath": "/usr/local/opt/llvm/bin/lldb-mi", // Use LLDB instead
+            "setupCommands": [
+                {
+                    "text": "settings set target.language c",
+                    "description": "Set language to C",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build"
+        }
+    ]
+}
+
